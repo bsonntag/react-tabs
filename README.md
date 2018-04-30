@@ -116,3 +116,11 @@ This component will render the result of calling its children.
 #### tab: `string | number`
 
 This tab's identifier.
+
+## Contributing
+
+Please feel free to submit any issues or pull requests.
+
+## License
+
+MIT
