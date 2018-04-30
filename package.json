@@ -1,0 +1,44 @@
+{
+  "name": "@bsonntag/react-tabs",
+  "version": "0.0.0",
+  "description": "Tab components for react",
+  "license": "MIT",
+  "author": "Benjamim Sonntag <benjamimsonntag@seegno.com>",
+  "main": "dist/index.js",
+  "scripts": {
+    "bundle": "rm -rf dist && babel src --out-dir dist",
+    "bundle:watch": "babel src --out-dir dist --watch",
+    "test": "jest",
+    "test:watch": "jest --watch --notify",
+    "version": "npm run bundle"
+  },
+  "jest": {
+    "coverageDirectory": "coverage",
+    "coverageReporters": [
+      "html",
+      "lcov",
+      "text"
+    ],
+    "setupTestFrameworkScriptFile": "./jest-setup.js"
+  },
+  "dependencies": {
+    "prop-types": "^15.6.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^22.4.3",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "eslint": "^4.19.1",
+    "eslint-config-seegno": "^10.0.0",
+    "eslint-plugin-react": "^7.7.0",
+    "jest": "^22.4.3",
+    "jest-dom": "^1.0.0",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-testing-library": "^2.3.0",
+    "regenerator-runtime": "^0.11.1"
+  }
+}
