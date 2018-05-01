@@ -1,6 +1,23 @@
 # @bsonntag/react-tabs
 
-> Tab components for react.
+> Flexible tab components for react.
+
+## Installation
+
+Using npm:
+
+```sh
+$ npm install --save @bsonntag/react-tabs
+```
+
+Using yarn:
+
+```sh
+$ yarn add @bsonntag/react-tabs
+```
+
+This module uses react's `createContext` API,
+so make sure you have at least version 16.3.0 installed.
 
 ## Example usage
 
