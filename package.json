@@ -1,10 +1,11 @@
 {
   "name": "@bsonntag/react-tabs",
   "version": "0.0.0",
-  "description": "Tab components for react",
+  "description": "Flexible tab components for react",
   "license": "MIT",
   "author": "Benjamim Sonntag <benjamimsonntag@seegno.com>",
   "main": "dist/index.js",
+  "repository": "git@github.com:bsonntag/react-tabs.git",
   "scripts": {
     "bundle": "rm -rf dist && babel src --out-dir dist",
     "bundle:watch": "babel src --out-dir dist --watch",
@@ -40,5 +41,8 @@
     "react-dom": "^16.3.2",
     "react-testing-library": "^2.3.0",
     "regenerator-runtime": "^0.11.1"
+  },
+  "peerDependencies": {
+    "react": "^16.3.0"
   }
 }
