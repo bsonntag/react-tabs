@@ -1,6 +1,6 @@
-import { Simulate, render } from 'react-testing-library';
 import { Tab } from './tab';
 import { Tabs } from './tabs';
+import { fireEvent, render } from 'react-testing-library';
 import React from 'react';
 
 describe('TabPanel', () => {
@@ -58,7 +58,7 @@ describe('TabPanel', () => {
       </Tabs>
     );
 
-    Simulate.click(getByText('test button'));
+    fireEvent.click(getByText('test button'));
 
     expect(onSelect).toHaveBeenCalled();
   });
