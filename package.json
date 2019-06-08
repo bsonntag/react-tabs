@@ -20,7 +20,9 @@
       "lcov",
       "text"
     ],
-    "setupFilesAfterEnv": ["./jest-setup.js"],
+    "setupFilesAfterEnv": [
+      "./jest-setup.js"
+    ],
     "testPathIgnorePatterns": [
       "<rootDir>/dist/",
       "/node_modules/"
@@ -30,10 +32,10 @@
     "prop-types": "^15.6.2"
   },
   "devDependencies": {
-    "@babel/cli": "^7.2.3",
-    "@babel/core": "^7.4.0",
-    "@babel/plugin-proposal-class-properties": "^7.4.0",
-    "@babel/preset-env": "^7.4.2",
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
     "@babel/preset-react": "^7.0.0",
     "babel-jest": "^24.5.0",
     "eslint": "^5.11.1",
