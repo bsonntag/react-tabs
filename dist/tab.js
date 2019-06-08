@@ -1,44 +1,35 @@
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Tab = undefined;
+exports.Tab = void 0;
 
-var _propTypes = require('prop-types');
+var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _propTypes2 = _interopRequireDefault(_propTypes);
+var _react = _interopRequireDefault(require("react"));
 
-var _react = require('react');
+var _tabContext = _interopRequireDefault(require("./tab-context"));
 
-var _react2 = _interopRequireDefault(_react);
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-var _tabContext = require('./tab-context');
-
-var _tabContext2 = _interopRequireDefault(_tabContext);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Tab = exports.Tab = function Tab(_ref) {
+var Tab = function Tab(_ref) {
   var children = _ref.children,
       tab = _ref.tab;
-  return _react2.default.createElement(
-    _tabContext2.default.Consumer,
-    null,
-    function (_ref2) {
-      var selectedTab = _ref2.selectedTab,
-          setSelectedTab = _ref2.setSelectedTab;
-      return children({
-        isSelected: selectedTab === tab,
-        select: function select() {
-          return setSelectedTab(tab);
-        }
-      });
-    }
-  );
+  return _react["default"].createElement(_tabContext["default"].Consumer, null, function (_ref2) {
+    var selectedTab = _ref2.selectedTab,
+        setSelectedTab = _ref2.setSelectedTab;
+    return children({
+      isSelected: selectedTab === tab,
+      select: function select() {
+        return setSelectedTab(tab);
+      }
+    });
+  });
 };
 
+exports.Tab = Tab;
 Tab.propTypes = {
-  children: _propTypes2.default.func.isRequired,
-  tab: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number]).isRequired
+  children: _propTypes["default"].func.isRequired,
+  tab: _propTypes["default"].oneOfType([_propTypes["default"].string, _propTypes["default"].number]).isRequired
 };

@@ -1,6 +1,6 @@
 {
   "name": "@bsonntag/react-tabs",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Flexible tab components for react",
   "repository": "git@github.com:bsonntag/react-tabs.git",
   "license": "MIT",
