@@ -9,6 +9,7 @@
   "scripts": {
     "bundle": "rm -rf dist && babel src --out-dir dist --ignore src/**/*.test.js",
     "bundle:watch": "babel src --out-dir dist --watch --ignore src/**/*.test.js",
+    "lint": "eslint .",
     "test": "jest",
     "test:watch": "jest --watch --notify",
     "version": "npm run bundle && git add dist"
@@ -37,12 +38,15 @@
     "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/preset-env": "^7.6.2",
     "@babel/preset-react": "^7.0.0",
+    "@bsonntag/eslint-config": "^0.4.1",
     "@testing-library/jest-dom": "^4.1.0",
     "@testing-library/react": "^9.2.0",
     "babel-jest": "^24.9.0",
-    "eslint": "^5.11.1",
-    "eslint-config-seegno": "^11.0.1",
+    "eslint": "^5.16.0",
+    "husky": "^3.0.7",
     "jest": "^24.9.0",
+    "lint-staged": "^9.4.0",
+    "prettier": "^1.18.2",
     "react": "^16.10.0",
     "react-dom": "^16.10.0"
   },

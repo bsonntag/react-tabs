@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import TabContext from './tab-context';
 
 export class Tabs extends Component {
-
   static propTypes = {
     children: PropTypes.node,
     onSelect: PropTypes.func.isRequired,
@@ -30,5 +29,4 @@ export class Tabs extends Component {
       </TabContext.Provider>
     );
   }
-
 }

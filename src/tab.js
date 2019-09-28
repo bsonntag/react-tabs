@@ -4,10 +4,12 @@ import TabContext from './tab-context';
 
 export const Tab = ({ children, tab }) => (
   <TabContext.Consumer>
-    {({ selectedTab, setSelectedTab }) => children({
-      isSelected: selectedTab === tab,
-      select: () => setSelectedTab(tab),
-    })}
+    {({ selectedTab, setSelectedTab }) =>
+      children({
+        isSelected: selectedTab === tab,
+        select: () => setSelectedTab(tab),
+      })
+    }
   </TabContext.Consumer>
 );
 

@@ -6,10 +6,7 @@ import TabContext from './tab-context';
 describe('Tabs', () => {
   it('renders the children prop', () => {
     const { container } = render(
-      <Tabs
-        onSelect={() => {}}
-        selectedTab={'foo'}
-      >
+      <Tabs onSelect={() => {}} selectedTab={'foo'}>
         {'bar'}
       </Tabs>
     );
@@ -21,10 +18,7 @@ describe('Tabs', () => {
     const onSelect = jest.fn();
 
     render(
-      <Tabs
-        onSelect={onSelect}
-        selectedTab={'foo'}
-      >
+      <Tabs onSelect={onSelect} selectedTab={'foo'}>
         <TabContext.Consumer>
           {({ selectedTab, setSelectedTab }) => {
             expect(selectedTab).toBe('foo');

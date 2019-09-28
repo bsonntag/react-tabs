@@ -3,23 +3,16 @@ import { Tabs } from './tabs';
 import { fireEvent, render } from '@testing-library/react';
 import React from 'react';
 
-describe('TabPanel', () => {
+describe('Tab', () => {
   it('renders the result of calling the children prop', () => {
-    const { container } = render(
-      <Tab tab={'foo'}>
-        {() => 'bar'}
-      </Tab>
-    );
+    const { container } = render(<Tab tab={'foo'}>{() => 'bar'}</Tab>);
 
     expect(container).toHaveTextContent('bar');
   });
 
   it('calls children with a `isSelected` property set to true if the tab is selected', () => {
     render(
-      <Tabs
-        onSelect={() => {}}
-        selectedTab={'foo'}
-      >
+      <Tabs onSelect={() => {}} selectedTab={'foo'}>
         <Tab tab={'foo'}>
           {({ isSelected }) => expect(isSelected).toBe(true)}
         </Tab>
@@ -29,10 +22,7 @@ describe('TabPanel', () => {
 
   it('calls children with a `isSelected` property set to false if the tab is not selected', () => {
     render(
-      <Tabs
-        onSelect={() => {}}
-        selectedTab={'foo'}
-      >
+      <Tabs onSelect={() => {}} selectedTab={'foo'}>
         <Tab tab={'bar'}>
           {({ isSelected }) => expect(isSelected).toBe(false)}
         </Tab>
@@ -44,16 +34,9 @@ describe('TabPanel', () => {
     const onSelect = jest.fn();
 
     const { getByText } = render(
-      <Tabs
-        onSelect={onSelect}
-        selectedTab={'foo'}
-      >
+      <Tabs onSelect={onSelect} selectedTab={'foo'}>
         <Tab tab={'bar'}>
-          {({ select }) => (
-            <button onClick={select}>
-              {'test button'}
-            </button>
-          )}
+          {({ select }) => <button onClick={select}>{'test button'}</button>}
         </Tab>
       </Tabs>
     );
