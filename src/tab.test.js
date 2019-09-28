@@ -1,6 +1,6 @@
 import { Tab } from './tab';
 import { Tabs } from './tabs';
-import { fireEvent, render } from 'react-testing-library';
+import { fireEvent, render } from '@testing-library/react';
 import React from 'react';
 
 describe('TabPanel', () => {
