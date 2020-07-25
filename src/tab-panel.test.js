@@ -16,7 +16,7 @@ describe('TabPanel', () => {
     render(
       <Tabs onSelect={() => {}} selectedTab={'foo'}>
         <TabPanel tab={'foo'}>
-          {isSelected => expect(isSelected).toBe(true)}
+          {(isSelected) => expect(isSelected).toBe(true)}
         </TabPanel>
       </Tabs>
     );
@@ -26,7 +26,7 @@ describe('TabPanel', () => {
     render(
       <Tabs onSelect={() => {}} selectedTab={'foo'}>
         <TabPanel tab={'bar'}>
-          {isSelected => expect(isSelected).toBe(false)}
+          {(isSelected) => expect(isSelected).toBe(false)}
         </TabPanel>
       </Tabs>
     );
