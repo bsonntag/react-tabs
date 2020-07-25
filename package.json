@@ -9,7 +9,8 @@
   "scripts": {
     "bundle": "rm -rf dist && babel src --out-dir dist --ignore src/**/*.test.js",
     "bundle:watch": "babel src --out-dir dist --watch --ignore src/**/*.test.js",
-    "lint": "eslint .",
+    "format": "prettier --write \"./**/*.{js,json}\"",
+    "lint": "eslint . && prettier --check \"./**/*.{js,json}\"",
     "test": "jest",
     "test:watch": "jest --watch --notify",
     "version": "npm run bundle && git add dist"
