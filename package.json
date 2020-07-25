@@ -22,7 +22,7 @@
       "text"
     ],
     "setupFilesAfterEnv": [
-      "./jest-setup.js"
+      "@testing-library/jest-dom"
     ],
     "testPathIgnorePatterns": [
       "<rootDir>/dist/",
