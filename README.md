@@ -1,6 +1,8 @@
 # @bsonntag/react-tabs
 
-> Flexible tab components for react.
+[![CircleCI build](https://circleci.com/gh/bsonntag/react-tabs.svg?style=svg)](https://circleci.com/gh/bsonntag/react-tabs)
+
+Flexible tab components for react.
 
 ## Installation
 
